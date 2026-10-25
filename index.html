@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#24113f">
+<title>Yohannes Biazn Ferede | Amibara Properties</title>
+<style>
+:root{--green:#24113f;--green2:#4b2678;--gold:#d8b4ff;--cream:#f8f5ff;--ink:#241b32;--muted:#776d85;--white:#fff;--line:#e8e0f2;--purple:#6f35b5;--lavender:#eee4ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.55}
+a{color:inherit;text-decoration:none}button,input,select{font:inherit}.container{width:min(1160px,92%);margin:auto}
+header{background:linear-gradient(110deg,#24113f,#43216c);color:white;position:sticky;top:0;z-index:10;box-shadow:0 4px 18px #0002}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:15px 0}.brand{display:flex;align-items:center;gap:12px}.logo{width:48px;height:48px;border:1px solid #d8b4ff;border-radius:15px;display:grid;place-items:center;color:var(--gold);font-size:23px;font-weight:800;background:linear-gradient(145deg,#7042b0,#2a1247);box-shadow:0 5px 18px #0002;overflow:hidden}.logo img{width:100%;height:100%;object-fit:contain;padding:4px}.brand strong{display:block;letter-spacing:.3px}.brand small{color:#d8dfda}.navlinks{display:flex;gap:22px;align-items:center;font-size:14px}.lang-switch{border:1px solid #ffffff45;background:#ffffff12;color:white;border-radius:8px;padding:9px 10px;font-weight:800;cursor:pointer}.lang-switch:hover{background:#ffffff22}.navlinks a:hover{color:var(--gold)}.nav-cta{background:var(--gold);color:var(--green)!important;padding:10px 15px;border-radius:8px;font-weight:800}
+.hero{background:linear-gradient(110deg,#24113ff2,#24113fb0),url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=85');background-image:linear-gradient(110deg,rgba(16,43,38,.96),rgba(16,43,38,.72)),url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=85');background-size:cover;background-position:center;color:white;padding:64px 0 58px}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:45px;align-items:center}.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:800}.hero h1{font-size:clamp(36px,5vw,62px);line-height:1.07;margin:15px 0}.hero p{max-width:580px;color:#e0e8e2;font-size:17px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:9px;padding:12px 17px;font-weight:800;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px)}.btn-gold{background:var(--gold);color:var(--green)}.btn-outline{border:1px solid #ffffff70;color:white;background:#ffffff0b}.hero-note{border:1px solid #ffffff2b;background:#ffffff0c;border-radius:18px;padding:26px;backdrop-filter:blur(8px)}.hero-note .big{font-size:30px;color:var(--gold);font-weight:800}.hero-note p{font-size:14px;margin-bottom:0}.quick-stats{display:flex;gap:24px;margin-top:28px;flex-wrap:wrap}.quick-stats strong{display:block;font-size:21px}.quick-stats span{font-size:12px;color:#cbd6cf}
+.logo-hint{font-size:10px;color:#e9dcff;display:block;letter-spacing:.4px}.logo-hint b{color:#d8b4ff}section{padding:48px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px}.section-head h2{font-size:clamp(27px,3vw,38px);margin:6px 0}.section-head p{margin:0;color:var(--muted)}.kicker{color:#6f35b5;text-transform:uppercase;font-weight:800;letter-spacing:1.8px;font-size:11px}
+.category-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.category-card{position:relative;box-shadow:0 18px 40px #24113f22;min-height:215px;border-radius:18px;overflow:hidden;color:white;display:flex;align-items:end;padding:25px;background:#4b2678}.category-card:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#170b29e8,transparent 80%);z-index:0}.category-card img{position:absolute;width:100%;height:100%;object-fit:cover;inset:0;transition:transform .5s}.category-card:hover img{transform:scale(1.05)}.category-card div{position:relative;z-index:1}.category-card h3{font-size:27px;margin:0 0 5px}.category-card p{margin:0 0 12px;color:#e0e7e2}.text-link{font-weight:800;color:var(--gold)}
+#properties{background:#fff}.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:23px}.filters input,.filters select{border:1px solid var(--line);background:#fff;padding:12px 14px;border-radius:9px;min-width:160px;outline-color:var(--gold)}.filters input{flex:1;min-width:220px}.filter-btn{background:#eee4ff;color:#536058;border:1px solid transparent;padding:10px 15px;border-radius:9px;font-weight:800;cursor:pointer}.filter-btn.active{background:var(--green);color:white}.property-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.property-card{border:1px solid var(--line);box-shadow:0 8px 24px #38205a0a;border-radius:15px;overflow:hidden;background:white;transition:.2s}.property-card:hover{transform:translateY(-4px);box-shadow:0 14px 28px #24113f10}.property-image{height:210px;position:relative;background:#e7e8e1;overflow:hidden}.property-image img{width:100%;height:100%;object-fit:cover;display:block}.pill{position:absolute;top:13px;left:13px;background:white;color:var(--green);font-size:11px;font-weight:900;padding:6px 9px;border-radius:7px}.property-content{padding:18px}.property-content h3{margin:0 0 5px;font-size:19px}.location{color:var(--muted);font-size:13px}.price{color:#6f35b5;font-size:22px;font-weight:900;margin:12px 0}.specs{display:flex;gap:14px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:12px;color:#59655e;font-size:12px}.card-actions{display:flex;gap:9px;margin-top:16px}.card-actions .btn{flex:1;padding:10px;font-size:13px}.btn-dark{background:var(--green);color:white}.btn-light{background:#f1ebfa;color:var(--green)}.empty{grid-column:1/-1;text-align:center;padding:45px;color:var(--muted);border:1px dashed var(--line);border-radius:12px}
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:center}.portrait{min-height:330px;border-radius:18px;background:linear-gradient(135deg,#23483d,#24113f);color:var(--gold);display:grid;place-items:center;font-size:76px;position:relative;overflow:hidden}.portrait small{position:absolute;bottom:20px;left:20px;font-size:12px;letter-spacing:2px;color:#ffffffb8}.about-copy h2{font-size:36px;line-height:1.15;margin:10px 0 15px}.about-copy p{color:var(--muted)}.checks{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:22px 0}.checks span{font-weight:700;font-size:14px}.checks span:before{content:"✓";color:#6f35b5;margin-right:9px}
+.contact{background:var(--green);color:white}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.contact h2{font-size:38px;line-height:1.15;margin:10px 0}.contact p{color:#d0dcd4}.socials{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.social-link{padding:12px 16px;border:1px solid #ffffff35;border-radius:10px;font-weight:800}.social-link:hover{background:#ffffff12}.contact-panel{background:#ffffff0d;border:1px solid #ffffff20;padding:25px;border-radius:16px}.contact-panel label{display:block;font-size:13px;color:#d6e0d9;margin:12px 0 6px}.contact-panel input,.contact-panel select{width:100%;padding:12px;border-radius:8px;border:1px solid #ffffff25;background:#fff;color:var(--ink)}.contact-panel .btn{width:100%;margin-top:15px}
+footer{background:#170b29;color:#b9c7bf;padding:23px 0;font-size:13px}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.modal{position:fixed;inset:0;background:#160b25e8;z-index:30;display:none;align-items:center;justify-content:center;padding:18px}.modal.open{display:flex}.modal-box{background:white;width:min(760px,100%);max-height:92vh;overflow:auto;border-radius:18px;position:relative}.modal-close{position:absolute;right:13px;top:13px;z-index:2;border:0;background:white;width:38px;height:38px;border-radius:50%;font-size:24px;cursor:pointer;box-shadow:0 2px 8px #0002}.modal-image{width:100%;height:320px;object-fit:cover;background:#ddd}.modal-body{padding:25px}.modal-body h2{margin:0}.modal-body p{color:var(--muted)}.modal-gallery{display:flex;gap:8px;overflow:auto;margin:12px 0}.modal-gallery img{width:95px;height:68px;object-fit:cover;border-radius:7px;cursor:pointer;border:2px solid transparent}.modal-gallery img:hover{border-color:var(--gold)}.detail-row{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0}.detail-chip{padding:8px 11px;background:#eee4ff;border-radius:8px;font-size:13px;font-weight:700}
+@media(max-width:850px){.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero{padding:62px 0}.hero-note{max-width:500px}.property-grid{grid-template-columns:repeat(2,1fr)}.navlinks{gap:12px}.navlinks a:not(.nav-cta){display:none}}
+@media(max-width:560px){section{padding:48px 0}.property-grid,.category-grid{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.property-image{height:225px}.hero h1{font-size:39px}.brand strong{font-size:13px}.brand small{font-size:11px}.logo{width:39px;height:39px}.about-copy h2,.contact h2{font-size:30px}.checks{grid-template-columns:1fr 1fr}.modal-image{height:230px}}
+
+/* Purple-theme polish */
+.hero{background-color:#24113f}
+.btn-gold{background:linear-gradient(135deg,#e2c7ff,#bd8cff);box-shadow:0 7px 18px #8a55c52b}
+.nav-cta{background:linear-gradient(135deg,#e2c7ff,#bd8cff);box-shadow:0 5px 14px #0002}
+.property-card,.contact-panel,.hero-note{backdrop-filter:blur(10px)}
+.section-head h2,.about-copy h2{letter-spacing:-.7px}
+#properties{background:linear-gradient(180deg,#fff,#fbf9ff)}
+.logo img{display:block}
+@media(max-width:850px){.lang-switch{padding:8px}.navlinks{gap:8px}}
+
+.choice-card{width:100%;border:0;text-align:left;font-family:inherit;cursor:pointer}
+.choice-card:focus-visible,.block-choices button:focus-visible{outline:3px solid #d8b4ff;outline-offset:3px}
+.choice-expansion{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 12px 35px #38205a10;animation:expandIn .22s ease-out}
+.expansion-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:15px}
+.expansion-heading h3{margin:5px 0 0;font-size:23px}
+.clear-choice{border:1px solid var(--line);background:#f8f5ff;color:#4b2678;border-radius:8px;padding:9px 12px;font-weight:800;cursor:pointer}
+.block-choices{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.block-choices button{display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid #e6dcf3;background:#f9f6ff;color:#321c4f;padding:15px;border-radius:11px;font-weight:800;cursor:pointer;transition:.2s}
+.block-choices button:hover{background:#eee4ff;border-color:#b99ae5;transform:translateY(-2px)}
+.block-choices button span{color:#6f35b5;font-size:20px}
+.expansion-help{font-size:13px;color:var(--muted);margin:14px 0 0}
+@keyframes expandIn{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:650px){.block-choices{grid-template-columns:repeat(2,1fr)}.choice-expansion{padding:16px}.expansion-heading h3{font-size:20px}}
+
+
+/* Minimal expandable landing page */
+body{background:#f8f5ff}
+.minimal-header{position:absolute;top:0;left:0;width:100%;background:transparent;box-shadow:none;z-index:5}
+.mini-top{display:flex;justify-content:flex-end;padding-top:14px}
+.minimal-landing{min-height:48vh;padding:54px 0 22px;background:radial-gradient(circle at 50% 0%,#57308a 0,#2a1248 55%,#1d0b31 100%);color:#fff;text-align:center}
+.landing-inner{display:flex;align-items:center;flex-direction:column}
+.brand-emblem{width:116px;height:116px;border-radius:30px;border:2px solid #e2c7ff;background:linear-gradient(145deg,#8b5bc4,#2b1249);box-shadow:0 14px 38px #0005;display:grid;place-items:center;position:relative;overflow:hidden;margin:8px 0 12px}
+.brand-emblem img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:9px;z-index:2}
+.brand-letter{font-size:64px;font-weight:900;line-height:1;color:#f0ddff;text-shadow:0 3px 12px #0005}
+.brand-emblem:not(.no-logo) .brand-letter{display:none}
+.brand-emblem.no-logo .brand-letter{display:block}
+.landing-kicker{font-size:12px;letter-spacing:3px;font-weight:900;color:#d8b4ff;margin:0}
+.minimal-landing h1{font-size:clamp(30px,5vw,46px);margin:5px 0 0;line-height:1.1}
+.landing-subtitle{color:#e7daf7;margin:8px 0 16px}
+.landing-socials{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.social-pill{display:inline-flex;align-items:center;gap:9px;padding:10px 17px;border-radius:999px;font-weight:800;border:1px solid #ffffff42;background:#ffffff12;color:#fff;transition:.2s}
+.social-pill:hover{transform:translateY(-2px);background:#ffffff22}
+.social-symbol{font-size:18px}
+.whatsapp-pill{background:#168b59;border-color:#168b59}
+.whatsapp-pill:hover{background:#117849}
+#categories{padding:24px 0 36px}
+#categories .section-head{justify-content:center;text-align:center;margin-bottom:18px}
+#categories .section-head .kicker,#categories .section-head p{display:none}
+#categories .section-head h2{font-size:20px;margin:0;color:#4b2678}
+.category-grid{max-width:700px;margin:0 auto;gap:14px}
+.category-card{min-height:126px;border-radius:15px;padding:18px 20px;border:2px solid #e8ddf6;box-shadow:0 7px 20px #24113f12;text-align:left}
+.category-card:before{background:linear-gradient(0deg,#1b0b2adf,#1b0b2a55)}
+.category-card h3{font-size:22px}
+.category-card p{font-size:13px;margin-bottom:5px}
+.category-card .text-link{font-size:13px}
+.choice-expansion{max-width:700px;margin:18px auto 0;padding:20px;border:1px solid #e4d8f4;border-radius:16px;background:white;box-shadow:0 10px 28px #24113f0d}
+.expansion-heading h3{margin:4px 0;font-size:22px}
+.block-choices button{border:1px solid #e5d9f4;background:#f8f4ff;color:#43216c;border-radius:10px;padding:14px 16px;font-weight:800}
+#properties{padding:28px 0 50px;background:#fff}
+#properties[hidden]{display:none}
+#properties .container{max-width:1050px}
+#properties .section-head h2{font-size:28px}
+@media(min-width:760px){
+ .minimal-landing{min-height:43vh;padding-top:38px}
+ .brand-emblem{width:126px;height:126px}
+ #categories{padding-top:24px}
+ .category-card{min-height:150px}
+}
+@media(max-width:560px){
+ .minimal-landing{padding:52px 0 20px}
+ .brand-emblem{width:94px;height:94px;border-radius:25px}
+ .brand-letter{font-size:52px}
+ .landing-kicker{font-size:10px;letter-spacing:2.2px}
+ .minimal-landing h1{font-size:32px}
+ .landing-subtitle{font-size:14px;margin-bottom:13px}
+ #categories{padding:18px 0 30px}
+ .category-grid{grid-template-columns:1fr;gap:10px}
+ .category-card{min-height:112px}
+ .category-card h3{font-size:20px}
+ .choice-expansion{padding:15px}
+}
+
+/* Brand background logo and agent identity */
+.minimal-landing{position:relative;isolation:isolate;overflow:hidden}
+.landing-bg-logo{position:absolute;inset:-8% -15%;z-index:-1;display:flex;align-items:center;justify-content:center;pointer-events:none;opacity:.19}
+.landing-bg-logo .brand-slide{position:absolute;width:min(145vw,1250px);height:150%;max-height:none;object-fit:contain;filter:grayscale(1) brightness(2);opacity:0;transition:opacity 1s ease;transform:scale(1.12)}
+.landing-bg-logo .brand-slide.active{opacity:1}
+.landing-bg-logo .brand-fallback{font-size:clamp(100px,28vw,320px);font-weight:1000;letter-spacing:.08em;color:#fff;opacity:.22;display:none;white-space:nowrap}
+.landing-bg-logo.no-valid-images .brand-fallback{display:block}
+.landing-inner{position:relative;z-index:1}
+.brand-emblem{flex-shrink:0}
+.agent-signature{display:flex;align-items:center;justify-content:center;gap:11px;margin:0 auto 16px;padding:9px 15px;border:1px solid #ffffff35;background:#ffffff12;border-radius:16px;max-width:310px;text-align:left;backdrop-filter:blur(8px)}
+.agent-photo{width:54px;height:54px;flex:0 0 54px;border-radius:50%;overflow:hidden;background:#e3ccff;border:2px solid #f0ddff;display:grid;place-items:center;position:relative}
+.agent-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+.agent-initials{font-weight:900;font-size:17px;color:#48246f}
+.agent-photo:not(.no-agent-photo) .agent-initials{display:none}
+.agent-photo.no-agent-photo .agent-initials{display:block}
+.agent-details{display:flex;flex-direction:column;gap:2px}
+.agent-label{font-size:9px;letter-spacing:1.5px;color:#d8b4ff;font-weight:900}
+.agent-details strong{font-size:14px;color:#fff;line-height:1.25}
+.agent-role{font-size:11px;color:#e7daf7}
+@media(max-width:560px){
+ .landing-bg-logo .brand-slide{width:160vw;height:130%;max-height:none;transform:scale(1.08)}
+ .agent-signature{margin-bottom:13px;padding:8px 12px}
+ .agent-photo{width:48px;height:48px;flex-basis:48px}
+}
+
+/* Separate landing-page slideshow (independent from the static logo) */
+.landing-bg-logo{position:absolute;inset:-8% -15%;z-index:-1;display:flex;align-items:center;justify-content:center;pointer-events:none;opacity:.13}
+.landing-bg-logo img{width:min(145vw,1250px);height:150%;max-height:none;object-fit:contain;filter:grayscale(1) brightness(2)}
+.landing-bg-logo span{font-size:clamp(100px,28vw,320px);font-weight:1000;letter-spacing:.08em;color:#fff;opacity:.22;display:none;white-space:nowrap}
+.landing-bg-logo.no-bg-logo span{display:block}
+.landing-gallery{width:min(92%,680px);margin:0 auto 17px}
+.landing-gallery-frame{position:relative;aspect-ratio:16/6;min-height:125px;max-height:230px;overflow:hidden;border-radius:18px;border:1px solid #ffffff42;background:linear-gradient(135deg,#56317e,#2b1249);box-shadow:0 12px 28px #0003}
+.landing-gallery-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s ease}
+.landing-gallery-slide.active{opacity:1}
+.gallery-placeholder{display:none;position:absolute;inset:0;align-items:center;justify-content:center;text-align:center;color:#eadcff;font-size:14px;padding:20px;background:linear-gradient(135deg,#56317e,#2b1249)}
+.landing-gallery.gallery-empty .gallery-placeholder{display:flex}
+.gallery-caption{position:absolute;left:0;right:0;bottom:0;padding:11px 15px;color:#fff;text-align:left;font-weight:800;font-size:13px;background:linear-gradient(transparent,#160923d9)}
+@media(max-width:560px){
+ .landing-bg-logo img{width:160vw;height:130%}
+ .landing-gallery{width:100%;margin-bottom:14px}
+ .landing-gallery-frame{aspect-ratio:16/8;min-height:120px;border-radius:14px}
+}
+</style>
+
+<style>
+.language-switcher{position:absolute;top:16px;right:16px;z-index:50;display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.94);padding:7px 10px;border-radius:12px;box-shadow:0 5px 18px rgba(20,0,40,.16);font-size:13px;color:#3f176c}
+.language-switcher select{border:0;background:transparent;color:#3f176c;font-weight:700;outline:none;max-width:115px}
+@media(max-width:600px){.language-switcher{top:10px;right:10px;padding:6px 8px}.language-switcher select{max-width:92px}}
+</style>
+
+
+<style>
+/* Shop listings are not divided into house blocks such as Ertale 1 or Ertale 2. */
+body.shops-selected #blockFilter,
+body.shops-selected .block-filter,
+body.shops-selected [data-filter="block"],
+body.shops-selected .filters[aria-label="Quick block filters"] { display:none !important; }
+</style>
+
+</head>
+<body>
+
+<div class="language-switcher" aria-label="Language selection">
+  <span aria-hidden="true">🌐</span>
+  <select id="landingLanguageSelect" aria-label="Choose language">
+    <option value="en">English</option>
+    <option value="am">አማርኛ</option>
+  </select>
+</div>
+
+<header class="minimal-header">
+  <div class="container mini-top">
+    <button class="lang-switch" id="languageToggle" type="button" aria-label="Switch language">አማ</button>
+  </div>
+</header>
+
+<main>
+<section class="minimal-landing" id="home">
+  <div class="landing-bg-logo" aria-label="Amibara Properties background logo placeholder">
+    <img src="YOUR_AMIBARA_BACKGROUND_LOGO_URL_HERE" alt="Amibara Properties background logo" onerror="this.style.display='none';this.parentElement.classList.add('no-bg-logo');">
+    <span>AMIBARA</span>
+  </div>
+  <div class="container landing-inner">
+    <div class="brand-emblem" aria-label="Amibara Properties logo placeholder">
+      <img id="brandLogo" src="amibara.jpg" alt="Amibara Properties logo"
+           onerror="this.style.display='none';this.parentElement.classList.add('no-logo');">
+      <span class="brand-letter">A</span>
+    </div>
+    <p class="landing-kicker" data-en="AMIBARA PROPERTIES" data-am="አሚባራ ፕሮፐርቲስ">AMIBARA PROPERTIES</p>
+    <h1 data-en="Find your place." data-am="የሚስማማዎትን ቦታ ያግኙ።">Find your place.</h1>
+    <p class="landing-subtitle" data-en="Choose a category to get started." data-am="ለመጀመር የንብረት ዓይነት ይምረጡ።">Choose a category to get started.</p>
+    <div class="agent-signature">
+      <div class="agent-photo" aria-label="Sales agent photo placeholder">
+        <img src="jhong.jpg" alt="Sales agent photo" onerror="this.style.display='none';this.parentElement.classList.add('no-agent-photo');">
+        <span class="agent-initials">YF</span>
+      </div>
+      <div class="agent-details">
+        <span class="agent-label" data-en="YOUR SALES AGENT" data-am="የሽያጭ ወኪል">YOUR SALES AGENT</span>
+        <strong>Yohannes Biazn Ferede</strong>
+        <span class="agent-role" data-en="Property Sales Agent" data-am="የንብረት ሽያጭ ወኪል">Property Sales Agent</span>
+      </div>
+    </div>
+    <section class="landing-gallery" aria-label="Amibara Properties image slideshow">
+      <div class="landing-gallery-frame">
+        <img class="landing-gallery-slide active" src="1.jpg" alt="Amibara Properties gallery image 1" onerror="this.style.display='none';">
+        <img class="landing-gallery-slide" src="2.jpg" alt="Amibara Properties gallery image 2" onerror="this.style.display='none';">
+        <img class="landing-gallery-slide" src="3.jpg" alt="Amibara Properties gallery image 3" onerror="this.style.display='none';">
+        <img class="landing-gallery-slide" src="4.jpg" alt="Amibara Properties gallery image 4" onerror="this.style.display='none';">
+        <img class="landing-gallery-slide" src="5.jpg" alt="Amibara Properties gallery image 5" onerror="this.style.display='none';">
+        <img class="landing-gallery-slide" src="Y6.jpg" alt="Amibara Properties gallery image 6" onerror="this.style.display='none';">
+        <div class="gallery-placeholder">Add landing-page images here</div>
+        <div class="gallery-caption" data-en="Discover properties with Amibara" data-am="ከአሚባራ ጋር ንብረቶችን ያግኙ">Discover properties with Amibara</div>
+      </div>
+    </section>
+    <div class="landing-socials">
+      <a class="social-pill telegram-pill" id="telegramLink" href="https://t.me/Amibarayohannes" target="_blank" rel="noopener"><span class="social-symbol">➤</span> Telegram</a>
+      <a class="social-pill whatsapp-pill" id="whatsappLink" href="https://wa.me/251900111187" target="_blank" rel="noopener"><span class="social-symbol">◉</span> WhatsApp</a>
+    </div>
+  </div>
+</section>
+<section id="categories">
+  <div class="container">
+    <div class="section-head"><div><div class="kicker" data-en="START HERE" data-am="ከዚህ ይጀምሩ">START HERE</div><h2 data-en="What are you looking for?" data-am="ምን ይፈልጋሉ?">What are you looking for?</h2><p data-en="Choose a category to reveal the next options." data-am="ቀጣይ ምርጫዎችን ለማየት ዓይነት ይምረጡ።">Choose a category to reveal the next options.</p></div></div>
+    <div class="category-grid">
+      <button class="category-card choice-card" type="button" onclick="chooseCategory('house')" aria-label="Choose living houses"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80" alt="Living house"><div><h3 data-en="Living Houses" data-am="የመኖሪያ ቤቶች">Living Houses</h3><p data-en="Choose a block to continue." data-am="ለመቀጠል ብሎክ ይምረጡ።">Choose a block to continue.</p><span class="text-link" data-en="Explore houses ↓" data-am="ቤቶችን ይመልከቱ ↓">Explore houses ↓</span></div></button>
+      <button class="category-card choice-card" type="button" onclick="chooseCategory('shop')" aria-label="Choose shops"><img src="https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&w=1000&q=80" alt="Shop space"><div><h3 data-en="Shops" data-am="ሱቆች">Shops</h3><p data-en="See commercial spaces." data-am="የንግድ ቦታዎችን ይመልከቱ።">See commercial spaces.</p><span class="text-link" data-en="Explore shops ↓" data-am="ሱቆችን ይመልከቱ ↓">Explore shops ↓</span></div></button>
+    </div>
+    <div id="choiceExpansion" class="choice-expansion" hidden>
+      <div class="expansion-heading"><div><div class="kicker" id="expansionKicker">NEXT STEP</div><h3 id="expansionTitle">Choose a house block</h3></div><button class="clear-choice" onclick="resetChoice()" type="button" data-en="Back" data-am="ተመለስ">← Back</button></div>
+      <div id="blockChoices" class="block-choices">
+        <button type="button" onclick="chooseBlock('Ertale 1')">Ertale 1 <span>→</span></button>
+        <button type="button" onclick="chooseBlock('Ertale 2')">Ertale 2 <span>→</span></button>
+        <button type="button" onclick="chooseBlock('Aseb')">Aseb <span>→</span></button>
+        <button type="button" onclick="chooseBlock('Adera')">Adera <span>→</span></button>
+      </div>
+      <p id="expansionHelp" class="expansion-help">Select a block to view its listings below.</p>
+    </div>
+  </div>
+</section>
+
+<section id="properties" hidden>
+  <div class="container">
+    <div class="section-head"><div><div class="kicker" data-en="Property catalogue" data-am="የንብረት ዝርዝር">Property catalogue</div><h2 data-en="Explore listings" data-am="የሚገኙ ንብረቶችን ይመልከቱ">Explore listings</h2><p data-en="Open a listing to view more details and photos." data-am="ተጨማሪ ዝርዝርና ፎቶዎችን ለማየት ንብረት ይክፈቱ።">Open a listing to view more details and photos.</p></div></div>
+    <div class="filters">
+      <input id="search" type="search" placeholder="Search by property name or feature..." aria-label="Search properties">
+      <select id="typeFilter" aria-label="Property type"><option value="all" data-en="All property types" data-am="ሁሉም የንብረት ዓይነቶች">All property types</option><option value="house" data-en="Living houses" data-am="የመኖሪያ ቤቶች">Living houses</option><option value="shop">Shops</option></select>
+      <select id="blockFilter" aria-label="House block"><option value="all" data-en="All house blocks" data-am="ሁሉም ብሎኮች">All house blocks</option><option>Ertale 1</option><option>Ertale 2</option><option>Aseb</option><option>Adera</option></select>
+    </div>
+    <div class="filters" aria-label="Quick block filters">
+      <button class="filter-btn active" onclick="setBlock('all',this)" data-en="All blocks" data-am="ሁሉም ብሎኮች">All blocks</button><button class="filter-btn" onclick="setBlock('Ertale 1',this)">Ertale 1</button><button class="filter-btn" onclick="setBlock('Ertale 2',this)">Ertale 2</button><button class="filter-btn" onclick="setBlock('Aseb',this)">Aseb</button><button class="filter-btn" onclick="setBlock('Adera',this)">Adera</button>
+    </div>
+    <div class="property-grid" id="propertyGrid"></div>
+    <p style="font-size:11px;color:#776d85;margin-top:14px">Sample listings — confirm availability and prices with the agent.</p>
+  </div>
+</section>
+
+</main>
+
+
+<div class="modal" id="propertyModal" role="dialog" aria-modal="true" aria-label="Property details">
+  <div class="modal-box"><button class="modal-close" onclick="closeModal()" aria-label="Close details">×</button><img class="modal-image" id="modalImage" src="" alt="Property photo"><div class="modal-body"><div class="kicker" id="modalTag"></div><h2 id="modalTitle"></h2><div class="price" id="modalPrice"></div><p id="modalDescription"></p><div class="detail-row" id="modalSpecs"></div><div class="modal-gallery" id="modalGallery"></div><div class="card-actions"><a class="btn btn-dark" id="modalWhatsApp" href="#" target="_blank" rel="noopener">Ask about this property ↗</a><button class="btn btn-light" onclick="closeModal()">Close</button></div></div></div>
+</div>
+<script>
+// IMPORTANT: Replace these values with Yohannes's actual contact details and social profiles.
+const CONTACT = {
+  whatsappNumber: "251900111187", // country code + number, digits only; replace Xs
+  telegramUrl: "https://t.me/Amibarayohannes",
+  tiktokUrl: "https://www.tiktok.com/@YOUR_TIKTOK_USERNAME"
+};
+
+// Sample listing data. Replace sample values and image URLs with real listings.
+const properties = [
+ {id:1,type:"house",name:"Living House — Ertale 1",block:"Ertale 1",price:"Price on request",location:"Amibara Properties",size:"Confirm with agent",beds:"Confirm",bath:"Confirm",desc:"Ask Yohannes for current availability, floor plan, finishing details, payment schedule, and viewing arrangements.",images:["https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85","https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85"]},
+ {id:2,type:"house",name:"Living House — Ertale 2",block:"Ertale 2",price:"Price on request",location:"Amibara Properties",size:"Confirm with agent",beds:"Confirm",bath:"Confirm",desc:"Ask about available house types, room layouts, finishing options, price, and payment terms.",images:["https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85","https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85","https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85"]},
+ {id:3,type:"house",name:"Living House — Aseb",block:"Aseb",price:"Price on request",location:"Amibara Properties",size:"Confirm with agent",beds:"Confirm",bath:"Confirm",desc:"Contact for current availability and verified property specifications for the Aseb block.",images:["https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=85","https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85"]},
+ {id:4,type:"house",name:"Living House — Adera",block:"Adera",price:"Price on request",location:"Amibara Properties",size:"Confirm with agent",beds:"Confirm",bath:"Confirm",desc:"Ask Yohannes about the available units, size, price, payment options, and how to arrange a visit.",images:["https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85","https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85","https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85"]},
+ {id:5,type:"shop",name:"Commercial Shop Space",block:"",price:"Price on request",location:"Amibara Properties",size:"Ask for available m²",beds:"Commercial",bath:"Confirm",desc:"A shop listing placeholder. Ask for exact floor area, frontage, location, permitted use, service charges, and availability.",images:["https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&w=1200&q=85","https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=85","https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85"]},
+ {id:6,type:"shop",name:"Retail Shop Opportunity",block:"",price:"Price on request",location:"Amibara Properties",size:"Ask for available m²",beds:"Commercial",bath:"Confirm",desc:"Sample shop card. Contact to confirm the exact address, shop size, price, terms, and whether it is available.",images:["https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=85","https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&w=1200&q=85","https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85"]}
+];
+let selectedBlock="all";
+const grid=document.getElementById("propertyGrid");
+function renderProperties(){
+ const q=document.getElementById("search").value.toLowerCase().trim();
+ const type=document.getElementById("typeFilter").value;
+ const block=document.getElementById("blockFilter").value;
+ const filtered=properties.filter(p=>(type==="all"||p.type===type)&&(block==="all"||p.block===block)&&(selectedBlock==="all"||p.block===selectedBlock)&&(`${p.name} ${p.block} ${p.desc} ${p.size}`.toLowerCase().includes(q)));
+ grid.innerHTML="";
+ if(!filtered.length){grid.innerHTML='<div class="empty" data-en="No matching listings. Try another category or search term." data-am="የሚዛመድ ንብረት አልተገኘም። ሌላ ዓይነት ወይም ቃል ይሞክሩ።">No matching listings. Try another category or search term.</div>';return}
+ filtered.forEach(p=>{
+  const el=document.createElement("article");el.className="property-card";
+  el.innerHTML=`<div class="property-image"><img loading="lazy" src="${p.images[0]}" alt="${p.name}" onerror="this.src='https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80'"><span class="pill">${p.type==="house"?"LIVING HOUSE":"SHOP"}${p.block?" · "+p.block.toUpperCase():""}</span></div><div class="property-content"><h3>${p.name}</h3><div class="location">${p.block || (p.type==="shop" ? "Commercial space" : "Living house")}</div><div class="price">${p.price}</div><div class="specs"><span>${p.type==="house"?"Living house":"Commercial shop"}</span></div><div class="card-actions"><button class="btn btn-dark" onclick="showDetails(${p.id})" data-en="View details" data-am="ዝርዝር ይመልከቱ">View details</button><button class="btn btn-light" onclick="askProperty(${p.id})" data-en="Enquire ↗" data-am="ይጠይቁ ↗">Enquire ↗</button></div></div>`;
+  grid.appendChild(el);
+ });
+}
+function setCategory(type){document.getElementById("typeFilter").value=type;document.getElementById("blockFilter").value="all";selectedBlock="all";document.querySelectorAll(".filter-btn").forEach(b=>b.classList.toggle("active",b.textContent==="All blocks"));renderProperties()}
+function chooseCategory(type){
+  const panel = document.getElementById("choiceExpansion");
+  const propertiesSection = document.getElementById("properties");
+  const blockChoices = document.getElementById("blockChoices");
+  const help = document.getElementById("expansionHelp");
+
+  document.body.classList.toggle("shops-selected", type === "shop");
+  propertiesSection.hidden = false;
+  setCategory(type);
+
+  if (type === "shop") {
+    // Shops have no block choices: show all shop cards and their images/details directly.
+    panel.hidden = true;
+    blockChoices.style.display = "none";
+    document.getElementById("typeFilter").value = "shop";
+    document.getElementById("blockFilter").value = "all";
+    document.getElementById("search").value = "";
+    selectedBlock = "all";
+    renderProperties();
+    propertiesSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    return;
+  }
+
+  // Living houses retain the block-selection step.
+  panel.hidden = false;
+  blockChoices.style.display = "grid";
+  document.getElementById("expansionTitle").textContent = currentLanguage === "am" ? "የቤት ብሎክ ይምረጡ" : "Choose a house block";
+  document.getElementById("expansionKicker").textContent = currentLanguage === "am" ? "የመኖሪያ ቤቶች" : "LIVING HOUSES";
+  help.textContent = currentLanguage === "am" ? "ከታች ያለውን ብሎክ ይምረጡ።" : "Select a block to view matching listings below.";
+  panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+function chooseBlock(block){
+  selectedBlock=block;
+  document.getElementById("typeFilter").value="house";
+  document.getElementById("blockFilter").value=block;
+  document.querySelectorAll(".filter-btn").forEach(b=>b.classList.toggle("active",b.textContent.trim()===block));
+  renderProperties();
+  document.getElementById("expansionHelp").textContent=(currentLanguage==="am"?"የተመረጠው ብሎክ፦ ":"Selected block: ")+block+". "+(currentLanguage==="am"?"ዝርዝሮችን ከታች ይመልከቱ።":"View matching listings below.");
+  document.getElementById("properties").scrollIntoView({behavior:"smooth"});
+}
+function resetChoice(){
+  document.getElementById("choiceExpansion").hidden=true;
+  document.getElementById("properties").hidden=true;
+  selectedBlock="all";
+  document.getElementById("typeFilter").value="all";
+  document.getElementById("blockFilter").value="all";
+  document.querySelectorAll(".filter-btn").forEach(b=>b.classList.toggle("active",b.textContent.trim()==="All blocks"));
+  renderProperties();
+}
+function setBlock(block,btn){selectedBlock=block;document.getElementById("blockFilter").value=block;document.querySelectorAll(".filter-btn").forEach(b=>b.classList.remove("active"));btn.classList.add("active");renderProperties()}
+function showDetails(id){
+ const p=properties.find(x=>x.id===id);if(!p)return;
+ document.getElementById("modalImage").src=p.images[0];document.getElementById("modalImage").alt=p.name;
+ document.getElementById("modalTag").textContent=p.type==="house"?"LIVING HOUSE"+(p.block?" · "+p.block:""):"SHOP";
+ document.getElementById("modalTitle").textContent=p.name;document.getElementById("modalPrice").textContent=p.price;document.getElementById("modalDescription").textContent=p.desc;
+ document.getElementById("modalSpecs").innerHTML=[`Size: ${p.size}`,`Type: ${p.type==="house"?"Living house":"Shop"}`,...(p.block?[`Block: ${p.block}`]:[])].map(s=>`<span class="detail-chip">${s}</span>`).join("");
+ document.getElementById("modalGallery").innerHTML=p.images.map((src,i)=>`<img src="${src}" alt="${p.name} photo ${i+1}" onclick="document.getElementById('modalImage').src='${src}'" onerror="this.style.display='none'">`).join("");
+ const msg=encodeURIComponent(`Hello Yohannes, I'm interested in ${p.name}. Please share the current price, availability, and full details.`);
+ document.getElementById("modalWhatsApp").href=whatsappUrl(msg);
+ document.getElementById("propertyModal").classList.add("open");document.body.style.overflow="hidden";
+}
+function closeModal(){document.getElementById("propertyModal").classList.remove("open");document.body.style.overflow=""}
+function whatsappUrl(message){const n=CONTACT.whatsappNumber;return `https://wa.me/${n}?text=${message}`}
+function askProperty(id){const p=properties.find(x=>x.id===id);const msg=encodeURIComponent(`Hello Yohannes, I'm interested in ${p.name}. Please send me the price, availability, and full details.`);window.open(whatsappUrl(msg),"_blank","noopener")}
+document.getElementById("search").addEventListener("input",renderProperties);
+document.getElementById("typeFilter").addEventListener("change",()=>{selectedBlock="all";document.querySelectorAll(".filter-btn").forEach(b=>b.classList.toggle("active",b.textContent==="All blocks"));renderProperties()});
+document.getElementById("blockFilter").addEventListener("change",()=>{selectedBlock="all";document.querySelectorAll(".filter-btn").forEach(b=>b.classList.toggle("active",b.textContent==="All blocks"));renderProperties()});
+document.getElementById("contactForm").addEventListener("submit",e=>{e.preventDefault();const name=document.getElementById("visitorName").value.trim();const interest=document.getElementById("interest").value;const message=document.getElementById("message").value.trim();window.open(whatsappUrl(encodeURIComponent(`Hello Yohannes, my name is ${name}. I'm interested in: ${interest}. ${message}`)),"_blank","noopener")});
+document.getElementById("telegramLink").href=CONTACT.telegramUrl;
+
+document.getElementById("whatsappLink").href=whatsappUrl(encodeURIComponent("Hello Yohannes, I would like to ask about Amibara Properties listings."));
+
+document.getElementById("propertyModal").addEventListener("click",e=>{if(e.target.id==="propertyModal")closeModal()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+
+// Simple English / Amharic UI switch. Property names and user-entered content remain as entered.
+let currentLanguage = "en";
+document.getElementById("languageToggle").addEventListener("click", () => {
+  currentLanguage = currentLanguage === "en" ? "am" : "en";
+  document.documentElement.lang = currentLanguage === "am" ? "am" : "en";
+  document.getElementById("languageToggle").textContent = currentLanguage === "en" ? "አማ" : "EN";
+  const expansion = document.getElementById("choiceExpansion");
+  if (expansion && !expansion.hidden) {
+    const houseMode = document.getElementById("blockChoices").style.display !== "none";
+    document.getElementById("expansionTitle").textContent = houseMode ? (currentLanguage === "am" ? "የቤት ብሎክ ይምረጡ" : "Choose a house block") : (currentLanguage === "am" ? "የሱቅ ንብረቶች" : "Shop listings");
+    document.getElementById("expansionKicker").textContent = houseMode ? (currentLanguage === "am" ? "የመኖሪያ ቤቶች" : "LIVING HOUSES") : (currentLanguage === "am" ? "የንግድ ቦታዎች" : "COMMERCIAL SPACES");
+  }
+  document.querySelectorAll("[data-en][data-am]").forEach(el => {
+    if (el.tagName === "INPUT" || el.tagName === "OPTION") return;
+    const value = el.getAttribute(currentLanguage === "am" ? "data-am" : "data-en");
+    if (value && !value.includes("<")) el.textContent = value;
+  });
+  const search = document.getElementById("search");
+  search.placeholder = currentLanguage === "am" ? "በንብረት ስም ወይም ባህሪ ይፈልጉ..." : "Search by property name or feature...";
+});
+
+renderProperties();
+</script>
+
+
+
+
+<script>
+(function(){
+  const gallery = document.querySelector('.landing-gallery');
+  if (!gallery) return;
+  const slides = Array.from(gallery.querySelectorAll('.landing-gallery-slide'));
+  const placeholder = gallery.querySelector('.gallery-placeholder');
+  let current = -1;
+
+  function availableSlides() {
+    return slides.filter(img => {
+      const src = img.getAttribute('src') || '';
+      return src && !src.includes('_URL_HERE') && img.style.display !== 'none' && img.complete && img.naturalWidth > 0;
+    });
+  }
+  function showNext() {
+    const available = availableSlides();
+    slides.forEach(img => img.classList.remove('active'));
+    if (!available.length) {
+      gallery.classList.add('gallery-empty');
+      return;
+    }
+    gallery.classList.remove('gallery-empty');
+    current = (current + 1) % available.length;
+    available[current].classList.add('active');
+  }
+  slides.forEach(img => {
+    img.addEventListener('load', () => {
+      if (availableSlides().length) gallery.classList.remove('gallery-empty');
+    });
+    img.addEventListener('error', () => {
+      img.style.display = 'none';
+      if (!availableSlides().length) gallery.classList.add('gallery-empty');
+    });
+  });
+  showNext();
+  window.setInterval(showNext, 3000);
+})();
+</script>
+
+
+<script>
+(function(){
+  const translations = {"Living Houses": "የመኖሪያ ቤቶች", "Shops": "ሱቆች", "Contact Us": "ያግኙን", "View Properties": "ንብረቶችን ይመልከቱ", "Available Properties": "ያሉ ንብረቶች", "Select a category": "ምድብ ይምረጡ", "Select an option": "አማራጭ ይምረጡ", "Home": "መነሻ", "Telegram": "ቴሌግራም", "WhatsApp": "ዋትስአፕ"};
+  const languageSelect = document.getElementById('landingLanguageSelect');
+  const textNodes = [];
+  function collectTextNodes(root){
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode(node){
+        if (!node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+        if (node.parentElement && (node.parentElement.closest('script,style,select,option,textarea,input') || node.parentElement.id === 'landingLanguageSelect')) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    let n; while ((n = walker.nextNode())) textNodes.push(n);
+  }
+  collectTextNodes(document.body);
+  const original = new Map();
+  textNodes.forEach(node => original.set(node, node.nodeValue));
+  function translate(lang){
+    document.documentElement.lang = lang === 'am' ? 'am' : 'en';
+    textNodes.forEach(node => {
+      const raw = original.get(node);
+      let value = raw;
+      Object.keys(translations).forEach(en => {
+        const am = translations[en];
+        if (lang === 'am') {
+          value = value.replace(new RegExp(en.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), am);
+        } else {
+          value = value.replace(new RegExp(am.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), en);
+        }
+      });
+      node.nodeValue = value;
+    });
+  }
+  if (languageSelect) {
+    languageSelect.addEventListener('change', () => translate(languageSelect.value));
+  }
+})();
+</script>
+
+
+<script>
+function updateBlockFilterVisibility() {
+  const typeFilter = document.getElementById('typeFilter');
+  const blockFilter = document.getElementById('blockFilter');
+  const quickBlockFilters = document.querySelector('.filters[aria-label="Quick block filters"]');
+  if (!typeFilter || !blockFilter) return;
+  const isShop = typeFilter.value === 'shop';
+  blockFilter.style.display = isShop ? 'none' : '';
+  blockFilter.disabled = isShop;
+  if (quickBlockFilters) quickBlockFilters.style.display = isShop ? 'none' : '';
+  document.body.classList.toggle('shops-selected', isShop);
+  if (isShop) {
+    blockFilter.value = 'all';
+    selectedBlock = 'all';
+  }
+}
+document.addEventListener('DOMContentLoaded', function () {
+  const typeFilter = document.getElementById('typeFilter');
+  if (typeFilter) {
+    typeFilter.addEventListener('change', updateBlockFilterVisibility);
+    updateBlockFilterVisibility();
+  }
+});
+</script>
+
+</body>
+</html>
